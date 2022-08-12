@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   database : 'join_us',  
-  password : '123456'
+  password : ''
 });
  
  

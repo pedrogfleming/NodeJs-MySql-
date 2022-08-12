@@ -6,11 +6,14 @@ var app = express();
 app.set("view engine","ejs");
 // Express doesnt come with parser installed so we have to in order to read the incoming body of a Post request 
 app.use(bodyParser.urlencoded({ extended:true }));
+//Take all the content of the public and serve them to our accesible views css
+
+app.use(express.static(__dirname+"/public"));
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     database : 'join_us',  
-    password : '123456'
+    password : ''
   });
 
 app.get("/", function(req, res){
